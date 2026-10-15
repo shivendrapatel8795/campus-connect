@@ -1,0 +1,3091 @@
+/*=================================================
+            STUDENT DASHBOARD
+=================================================*/
+
+.dashboard {
+
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    min-height: 100vh;
+
+    background: #F8FAFC;
+
+}
+
+/*=========================================
+                SIDEBAR
+=========================================*/
+
+.sidebar {
+
+    background: #0F172A;
+
+    color: #ffffff;
+
+    padding: 30px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+}
+
+.sidebar__logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    margin-bottom: 40px;
+
+}
+
+.sidebar__logo i {
+
+    color: var(--primary);
+
+}
+
+.sidebar__menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+.sidebar__menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    color: #CBD5E1;
+
+    text-decoration: none;
+
+    transition: .3s;
+
+}
+
+.sidebar__menu a:hover,
+
+.sidebar__menu a.active {
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+}
+
+.sidebar__menu i {
+
+    width: 22px;
+
+    text-align: center;
+
+}
+
+/*=========================================
+                MAIN
+=========================================*/
+
+.dashboard__main {
+
+    padding: 40px;
+
+}
+
+.dashboard__header {
+
+    margin-bottom: 40px;
+
+}
+
+.dashboard__header h1 {
+
+    font-size: 2rem;
+
+    color: var(--text);
+
+    margin-bottom: 10px;
+
+}
+
+.dashboard__header p {
+
+    color: var(--text-light);
+
+}
+
+/*=========================================
+            CONTENT AREA
+=========================================*/
+
+.dashboard__content {
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    padding: 40px;
+
+    min-height: 500px;
+
+    box-shadow: 0 15px 40px rgba(15, 23, 42, .08);
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:992px) {
+
+    .dashboard {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .sidebar {
+
+        position: relative;
+
+        height: auto;
+
+    }
+
+    .dashboard__main {
+
+        padding: 25px;
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .dashboard__main {
+
+        padding: 20px;
+
+    }
+
+    .dashboard__content {
+
+        padding: 24px;
+
+    }
+
+    .sidebar__logo {
+
+        font-size: 1.3rem;
+
+    }
+
+}
+
+/*=================================================
+            SIDEBAR PREMIUM
+=================================================*/
+
+/* Logo */
+
+.sidebar__logo {
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+/* Navigation */
+
+.sidebar__menu {
+
+    margin-top: 25px;
+
+}
+
+/* Links */
+
+.sidebar__menu a {
+
+    position: relative;
+
+    overflow: hidden;
+
+    font-weight: 500;
+
+}
+
+/* Left indicator */
+
+.sidebar__menu a::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 4px;
+
+    height: 0;
+
+    border-radius: 999px;
+
+    background: #ffffff;
+
+    transition: .35s;
+
+}
+
+.sidebar__menu a:hover::before,
+
+.sidebar__menu a.active::before {
+
+    height: 70%;
+
+}
+
+/* Hover animation */
+
+.sidebar__menu a:hover {
+
+    transform: translateX(6px);
+
+}
+
+/* Icon */
+
+.sidebar__menu i {
+
+    font-size: 1rem;
+
+    transition: .3s;
+
+}
+
+.sidebar__menu a:hover i,
+
+.sidebar__menu a.active i {
+
+    transform: scale(1.15);
+
+}
+
+/* Logout */
+
+.sidebar__menu a:last-child {
+
+    margin-top: auto;
+
+    color: #FCA5A5;
+
+}
+
+.sidebar__menu a:last-child:hover {
+
+    background: #DC2626;
+
+    color: #ffffff;
+
+}
+
+/* Smooth transition */
+
+.sidebar,
+
+.sidebar * {
+
+    transition:
+
+        background .3s ease,
+
+        color .3s ease,
+
+        transform .3s ease;
+
+}
+
+/*=================================================
+        SIDEBAR PREMIUM POLISH
+=================================================*/
+
+/* Decorative glow */
+
+.sidebar::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -80px;
+
+    left: -80px;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, .12);
+
+    filter: blur(45px);
+
+    pointer-events: none;
+
+}
+
+.sidebar::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -100px;
+
+    right: -100px;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(124, 58, 237, .10);
+
+    filter: blur(45px);
+
+    pointer-events: none;
+
+}
+
+/* Keep content above glow */
+
+.sidebar__logo,
+.sidebar__menu {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/* Glass highlight */
+
+.sidebar {
+
+    box-shadow:
+        10px 0 35px rgba(15, 23, 42, .20);
+
+}
+
+/* Active link */
+
+.sidebar__menu a.active {
+
+    box-shadow:
+        0 12px 24px rgba(37, 99, 235, .28);
+
+}
+
+/* Better hover */
+
+.sidebar__menu a:hover {
+
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, .18);
+
+}
+
+/* Logo animation */
+
+.sidebar__logo {
+
+    transition:
+        transform .35s ease;
+
+}
+
+.sidebar__logo:hover {
+
+    transform: translateX(4px);
+
+}
+
+/* Floating effect */
+
+.sidebar {
+
+    animation: sidebarFloat 10s ease-in-out infinite;
+
+}
+
+/*=========================================
+            KEYFRAMES
+=========================================*/
+
+@keyframes sidebarFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-3px);
+
+    }
+
+}
+
+/*=================================================
+            DASHBOARD TOPBAR
+=================================================*/
+
+.dashboard__header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+
+}
+
+.dashboard__header-left h1 {
+
+    font-size: 2rem;
+
+    color: var(--text);
+
+    margin-bottom: 8px;
+
+}
+
+.dashboard__header-left p {
+
+    color: var(--text-light);
+
+}
+
+.dashboard__header-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+/*=========================================
+                SEARCH
+=========================================*/
+
+.dashboard-search {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #ffffff;
+
+    padding: 12px 18px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, .08);
+
+    min-width: 280px;
+
+}
+
+.dashboard-search i {
+
+    color: var(--text-light);
+
+}
+
+.dashboard-search input {
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    width: 100%;
+
+    font: inherit;
+
+}
+
+/*=========================================
+            NOTIFICATION
+=========================================*/
+
+.dashboard-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, .08);
+
+    cursor: pointer;
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+
+    transition: .3s;
+
+}
+
+.dashboard-icon:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.notification-dot {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #EF4444;
+
+}
+
+/*=========================================
+                DATE
+=========================================*/
+
+.dashboard-date {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #ffffff;
+
+    padding: 12px 18px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, .08);
+
+    color: var(--text);
+
+}
+
+/*=========================================
+                PROFILE
+=========================================*/
+
+.dashboard-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: #ffffff;
+
+    padding: 10px 16px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, .08);
+
+}
+
+.dashboard-avatar {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--secondary));
+
+    color: #ffffff;
+
+    display: grid;
+
+    place-items: center;
+
+    font-weight: 700;
+
+}
+
+.dashboard-profile h4 {
+
+    margin-bottom: 4px;
+
+    color: var(--text);
+
+}
+
+.dashboard-profile span {
+
+    font-size: .9rem;
+
+    color: var(--text-light);
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:992px) {
+
+    .dashboard__header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .dashboard__header-right {
+
+        width: 100%;
+
+    }
+
+    .dashboard-search {
+
+        flex: 1;
+
+        min-width: 220px;
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .dashboard__header-right {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .dashboard-search,
+
+    .dashboard-date,
+
+    .dashboard-profile {
+
+        width: 100%;
+
+    }
+
+    .dashboard-icon {
+
+        align-self: flex-start;
+
+    }
+
+}
+
+/*=================================================
+        DASHBOARD STATISTICS
+=================================================*/
+
+.dashboard-stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 24px;
+
+    margin-bottom: 40px;
+
+}
+
+/*=========================================
+                CARD
+=========================================*/
+
+.stat-box {
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, .08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.stat-box:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 24px 45px rgba(15, 23, 42, .12);
+
+}
+
+/*=========================================
+                ICON
+=========================================*/
+
+.stat-box__icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 20px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--secondary));
+
+    color: #ffffff;
+
+    font-size: 1.5rem;
+
+    flex-shrink: 0;
+
+}
+
+/*=========================================
+                CONTENT
+=========================================*/
+
+.stat-box__content h3 {
+
+    font-size: 2rem;
+
+    color: var(--text);
+
+    margin-bottom: 6px;
+
+    font-weight: 700;
+
+}
+
+.stat-box__content p {
+
+    color: var(--text-light);
+
+    font-size: .95rem;
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px) {
+
+    .dashboard-stats {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .dashboard-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .stat-box {
+
+        padding: 22px;
+
+    }
+
+    .stat-box__icon {
+
+        width: 60px;
+
+        height: 60px;
+
+        font-size: 1.3rem;
+
+    }
+
+    .stat-box__content h3 {
+
+        font-size: 1.6rem;
+
+    }
+
+}
+
+/*=================================================
+        DASHBOARD STATISTICS PREMIUM POLISH
+=================================================*/
+
+/* Card effects */
+
+.stat-box {
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: statFloat 8s ease-in-out infinite;
+
+}
+
+/* Different animation delays */
+
+.stat-box:nth-child(2) {
+
+    animation-delay: .3s;
+
+}
+
+.stat-box:nth-child(3) {
+
+    animation-delay: .6s;
+
+}
+
+.stat-box:nth-child(4) {
+
+    animation-delay: .9s;
+
+}
+
+/* Premium shine */
+
+.stat-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent);
+
+    transform: skewX(-25deg);
+
+    transition: 1.3s;
+
+}
+
+.stat-box:hover::before {
+
+    left: 180%;
+
+}
+
+/* Icon animation */
+
+.stat-box__icon {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.stat-box:hover .stat-box__icon {
+
+    transform: scale(1.1) rotate(6deg);
+
+    box-shadow: 0 15px 30px rgba(37, 99, 235, .28);
+
+}
+
+/* Number animation */
+
+.stat-box__content h3 {
+
+    transition: color .3s ease;
+
+}
+
+.stat-box:hover .stat-box__content h3 {
+
+    color: var(--primary);
+
+}
+
+/*=========================================
+                KEYFRAMES
+=========================================*/
+
+@keyframes statFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-5px);
+
+    }
+
+}
+
+/*=================================================
+            ATTENDANCE WIDGET
+=================================================*/
+
+.attendance-widget {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 40px;
+
+}
+
+/*=========================================
+            COMMON CARD
+=========================================*/
+
+.attendance-card,
+.attendance-subjects {
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, .08);
+
+}
+
+/*=========================================
+            HEADER
+=========================================*/
+
+.attendance-card__header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+.attendance-card__header h2 {
+
+    color: var(--text);
+
+    font-size: 1.4rem;
+
+}
+
+.attendance-card__header span {
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+}
+
+/*=========================================
+        PROGRESS SECTION
+=========================================*/
+
+.attendance-progress {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+.progress-circle {
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+    background:
+        conic-gradient(var(--primary) 95%,
+            #E2E8F0 0%);
+
+    position: relative;
+
+    flex-shrink: 0;
+
+}
+
+.progress-circle::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+}
+
+.progress-circle span {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.attendance-info h3 {
+
+    color: var(--success);
+
+    margin-bottom: 10px;
+
+    font-size: 1.5rem;
+
+}
+
+.attendance-info p {
+
+    color: var(--text-light);
+
+    line-height: 1.7;
+
+}
+
+/*=========================================
+        SUBJECT LIST
+=========================================*/
+
+.attendance-subjects {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.subject-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #E2E8F0;
+
+}
+
+.subject-row:last-child {
+
+    border-bottom: none;
+
+}
+
+.subject-row span {
+
+    color: var(--text);
+
+    font-weight: 500;
+
+}
+
+.subject-row strong {
+
+    color: var(--primary);
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:992px) {
+
+    .attendance-widget {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .attendance-progress {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .progress-circle {
+
+        width: 130px;
+
+        height: 130px;
+
+    }
+
+    .progress-circle::before {
+
+        width: 100px;
+
+        height: 100px;
+
+    }
+
+}
+
+/*=================================================
+        ATTENDANCE PREMIUM POLISH
+=================================================*/
+
+/* Premium cards */
+
+.attendance-card,
+.attendance-subjects {
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: attendanceFloat 8s ease-in-out infinite;
+
+}
+
+/* Different animation delay */
+
+.attendance-subjects {
+
+    animation-delay: .4s;
+
+}
+
+/* Shine effect */
+
+.attendance-card::before,
+.attendance-subjects::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent);
+
+    transform: skewX(-25deg);
+
+    transition: 1.4s;
+
+}
+
+.attendance-card:hover::before,
+.attendance-subjects:hover::before {
+
+    left: 180%;
+
+}
+
+/* Progress circle animation */
+
+.progress-circle {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.attendance-card:hover .progress-circle {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 18px 35px rgba(37, 99, 235, .25);
+
+}
+
+/* Subject row */
+
+.subject-row {
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+
+    border-radius: 12px;
+
+    padding: 16px 12px;
+
+}
+
+.subject-row:hover {
+
+    transform: translateX(6px);
+
+    background: rgba(37, 99, 235, .05);
+
+}
+
+/* Percentage */
+
+.subject-row strong {
+
+    transition: color .3s ease;
+
+}
+
+.subject-row:hover strong {
+
+    color: var(--secondary);
+
+}
+
+/* Attendance heading */
+
+.attendance-info h3 {
+
+    transition: color .3s ease;
+
+}
+
+.attendance-card:hover .attendance-info h3 {
+
+    color: var(--primary);
+
+}
+
+/*=========================================
+                KEYFRAMES
+=========================================*/
+
+@keyframes attendanceFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-5px);
+
+    }
+
+}
+
+/*=================================================
+                COURSES SECTION
+=================================================*/
+
+.courses-widget {
+
+    margin-bottom: 40px;
+
+}
+
+.widget-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 24px;
+
+}
+
+.widget-header h2 {
+
+    font-size: 1.5rem;
+
+    color: var(--text);
+
+}
+
+.widget-header a {
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.widget-header a:hover {
+
+    color: var(--secondary);
+
+}
+
+.courses-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+}
+
+/*=========================================
+                COURSE CARD
+=========================================*/
+
+.course-card {
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, .08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.course-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 24px 45px rgba(15, 23, 42, .12);
+
+}
+
+.course-card__icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    border-radius: 18px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--secondary));
+
+    color: #ffffff;
+
+    font-size: 1.4rem;
+
+    margin-bottom: 20px;
+
+}
+
+.course-card h3 {
+
+    margin-bottom: 8px;
+
+    color: var(--text);
+
+}
+
+.course-card p {
+
+    color: var(--text-light);
+
+    margin-bottom: 20px;
+
+}
+
+/*=========================================
+            PROGRESS BAR
+=========================================*/
+
+.course-progress {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+.course-progress__bar {
+
+    flex: 1;
+
+    height: 10px;
+
+    background: #E2E8F0;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+}
+
+.course-progress__bar span {
+
+    display: block;
+
+    height: 100%;
+
+    border-radius: 999px;
+
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--secondary));
+
+}
+
+.course-progress strong {
+
+    color: var(--primary);
+
+    min-width: 42px;
+
+}
+
+/*=========================================
+                RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px) {
+
+    .courses-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .courses-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .course-card {
+
+        padding: 22px;
+
+    }
+
+}
+
+/*=================================================
+            COURSES PREMIUM POLISH
+=================================================*/
+
+/* Floating animation */
+
+.course-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: courseFloat 8s ease-in-out infinite;
+
+}
+
+.course-card:nth-child(2) {
+
+    animation-delay: .3s;
+
+}
+
+.course-card:nth-child(3) {
+
+    animation-delay: .6s;
+
+}
+
+/* Shine effect */
+
+.course-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent);
+
+    transform: skewX(-25deg);
+
+    transition: 1.3s;
+
+}
+
+.course-card:hover::before {
+
+    left: 180%;
+
+}
+
+/* Icon interaction */
+
+.course-card__icon {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.course-card:hover .course-card__icon {
+
+    transform: scale(1.1) rotate(8deg);
+
+    box-shadow: 0 18px 35px rgba(37, 99, 235, .28);
+
+}
+
+/* Progress bar animation */
+
+.course-progress__bar span {
+
+    transition: width .8s ease;
+
+}
+
+/* Percentage */
+
+.course-progress strong {
+
+    transition: color .3s ease;
+
+}
+
+.course-card:hover .course-progress strong {
+
+    color: var(--secondary);
+
+}
+
+/* Heading */
+
+.course-card h3 {
+
+    transition: color .3s ease;
+
+}
+
+.course-card:hover h3 {
+
+    color: var(--primary);
+
+}
+
+/*=========================================
+                KEYFRAMES
+=========================================*/
+
+@keyframes courseFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-5px);
+
+    }
+
+}
+
+/*=================================================
+            ASSIGNMENTS SECTION
+=================================================*/
+
+.assignments-widget {
+
+    margin-bottom: 40px;
+
+}
+
+.assignments-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+/*=========================================
+            ASSIGNMENT CARD
+=========================================*/
+
+.assignment-card {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: #ffffff;
+
+    padding: 24px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, .08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.assignment-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 22px 40px rgba(15, 23, 42, .12);
+
+}
+
+.assignment-info h3 {
+
+    color: var(--text);
+
+    margin-bottom: 8px;
+
+}
+
+.assignment-info p {
+
+    color: var(--text-light);
+
+}
+
+/*=========================================
+            STATUS BADGES
+=========================================*/
+
+.assignment-status {
+
+    padding: 8px 18px;
+
+    border-radius: 999px;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+.assignment-status.pending {
+
+    background: #FEF3C7;
+
+    color: #B45309;
+
+}
+
+.assignment-status.submitted {
+
+    background: #DCFCE7;
+
+    color: #15803D;
+
+}
+
+.assignment-status.overdue {
+
+    background: #FEE2E2;
+
+    color: #DC2626;
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:600px) {
+
+    .assignment-card {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .assignment-status {
+
+        align-self: flex-start;
+
+    }
+
+}
+
+/*=================================================
+        ASSIGNMENTS PREMIUM POLISH
+=================================================*/
+
+/* Premium assignment cards */
+
+.assignment-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: assignmentFloat 8s ease-in-out infinite;
+
+}
+
+/* Staggered animation */
+
+.assignment-card:nth-child(2) {
+
+    animation-delay: .3s;
+
+}
+
+.assignment-card:nth-child(3) {
+
+    animation-delay: .6s;
+
+}
+
+/* Shine effect */
+
+.assignment-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent);
+
+    transform: skewX(-25deg);
+
+    transition: 1.3s;
+
+}
+
+.assignment-card:hover::before {
+
+    left: 180%;
+
+}
+
+/* Assignment title */
+
+.assignment-info h3 {
+
+    transition: color .3s ease;
+
+}
+
+.assignment-card:hover .assignment-info h3 {
+
+    color: var(--primary);
+
+}
+
+/* Status badge */
+
+.assignment-status {
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.assignment-card:hover .assignment-status {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .15);
+
+}
+
+/*=========================================
+                KEYFRAMES
+=========================================*/
+
+@keyframes assignmentFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-5px);
+
+    }
+
+}
+
+/*=================================================
+                NOTICES SECTION
+=================================================*/
+
+.notices-widget {
+
+    margin-bottom: 40px;
+
+}
+
+.notices-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+/*=========================================
+                NOTICE CARD
+=========================================*/
+
+.notice-card {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: #ffffff;
+
+    padding: 24px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, .08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.notice-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 22px 40px rgba(15, 23, 42, .12);
+
+}
+
+.notice-info h3 {
+
+    color: var(--text);
+
+    margin-bottom: 8px;
+
+}
+
+.notice-info p {
+
+    color: var(--text-light);
+
+}
+
+/*=========================================
+                BADGES
+=========================================*/
+
+.notice-badge {
+
+    padding: 8px 18px;
+
+    border-radius: 999px;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+.notice-badge.important {
+
+    background: #FEE2E2;
+
+    color: #DC2626;
+
+}
+
+.notice-badge.new {
+
+    background: #DBEAFE;
+
+    color: #2563EB;
+
+}
+
+.notice-badge.info {
+
+    background: #DCFCE7;
+
+    color: #15803D;
+
+}
+
+/*=========================================
+                RESPONSIVE
+=========================================*/
+
+@media(max-width:600px) {
+
+    .notice-card {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .notice-badge {
+
+        align-self: flex-start;
+
+    }
+
+}
+
+/*=================================================
+        NOTICES PREMIUM POLISH
+=================================================*/
+
+/* Premium notice cards */
+
+.notice-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: noticeFloat 8s ease-in-out infinite;
+
+}
+
+/* Staggered animation */
+
+.notice-card:nth-child(2) {
+
+    animation-delay: .3s;
+
+}
+
+.notice-card:nth-child(3) {
+
+    animation-delay: .6s;
+
+}
+
+/* Shine effect */
+
+.notice-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent);
+
+    transform: skewX(-25deg);
+
+    transition: 1.3s;
+
+}
+
+.notice-card:hover::before {
+
+    left: 180%;
+
+}
+
+/* Notice title */
+
+.notice-info h3 {
+
+    transition: color .3s ease;
+
+}
+
+.notice-card:hover .notice-info h3 {
+
+    color: var(--primary);
+
+}
+
+/* Badge interaction */
+
+.notice-badge {
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.notice-card:hover .notice-badge {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .15);
+
+}
+
+/*=========================================
+                KEYFRAMES
+=========================================*/
+
+@keyframes noticeFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-5px);
+
+    }
+
+}
+
+/*=================================================
+                EVENTS SECTION
+=================================================*/
+
+.events-widget {
+
+    margin-bottom: 40px;
+
+}
+
+.events-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+}
+
+/*=========================================
+                EVENT CARD
+=========================================*/
+
+.event-card {
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: flex-start;
+
+    background: #ffffff;
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, .08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.event-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 22px 42px rgba(15, 23, 42, .12);
+
+}
+
+/*=========================================
+                DATE BOX
+=========================================*/
+
+.event-date {
+
+    width: 72px;
+
+    min-width: 72px;
+
+    height: 82px;
+
+    border-radius: 18px;
+
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--secondary));
+
+    color: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.event-date .day {
+
+    font-size: 1.7rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+}
+
+.event-date .month {
+
+    font-size: .85rem;
+
+    letter-spacing: 1px;
+
+    margin-top: 6px;
+
+}
+
+/*=========================================
+            EVENT CONTENT
+=========================================*/
+
+.event-content {
+
+    flex: 1;
+
+}
+
+.event-content h3 {
+
+    margin-bottom: 10px;
+
+    color: var(--text);
+
+}
+
+.event-content p {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--text-light);
+
+    margin-bottom: 16px;
+
+}
+
+.event-content i {
+
+    color: var(--primary);
+
+}
+
+/*=========================================
+            STATUS BADGE
+=========================================*/
+
+.event-status {
+
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+}
+
+.event-status.open {
+
+    background: #DCFCE7;
+
+    color: #15803D;
+
+}
+
+.event-status.closing {
+
+    background: #FEF3C7;
+
+    color: #B45309;
+
+}
+
+.event-status.closed {
+
+    background: #FEE2E2;
+
+    color: #DC2626;
+
+}
+
+/*=========================================
+                RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px) {
+
+    .events-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .events-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .event-card {
+
+        padding: 20px;
+
+    }
+
+}
+
+/*=================================================
+            EVENTS PREMIUM POLISH
+=================================================*/
+
+/* Premium event cards */
+
+.event-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: eventFloat 8s ease-in-out infinite;
+
+}
+
+/* Staggered animation */
+
+.event-card:nth-child(2) {
+
+    animation-delay: .3s;
+
+}
+
+.event-card:nth-child(3) {
+
+    animation-delay: .6s;
+
+}
+
+/* Shine effect */
+
+.event-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent);
+
+    transform: skewX(-25deg);
+
+    transition: 1.3s;
+
+}
+
+.event-card:hover::before {
+
+    left: 180%;
+
+}
+
+/* Date animation */
+
+.event-date {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.event-card:hover .event-date {
+
+    transform: scale(1.08) rotate(-4deg);
+
+    box-shadow: 0 18px 35px rgba(37, 99, 235, .28);
+
+}
+
+/* Event title */
+
+.event-content h3 {
+
+    transition: color .3s ease;
+
+}
+
+.event-card:hover .event-content h3 {
+
+    color: var(--primary);
+
+}
+
+/* Status badge */
+
+.event-status {
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.event-card:hover .event-status {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .15);
+
+}
+
+/*=========================================
+                KEYFRAMES
+=========================================*/
+
+@keyframes eventFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-5px);
+
+    }
+
+}
+
+/*=================================================
+        RESPONSIVE DASHBOARD IMPROVEMENTS
+=================================================*/
+
+/* Large Tablets */
+
+@media (max-width: 1200px) {
+
+    .dashboard__main {
+
+        padding: 30px;
+
+    }
+
+    .dashboard__content {
+
+        padding: 30px;
+
+    }
+
+}
+
+/* Tablets */
+
+@media (max-width: 992px) {
+
+    .dashboard {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .sidebar {
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 20px;
+
+    }
+
+    .sidebar__menu {
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+
+    }
+
+    .sidebar__menu a {
+
+        flex: 1 1 calc(50% - 12px);
+
+        justify-content: center;
+
+    }
+
+    .dashboard__main {
+
+        padding: 24px;
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px) {
+
+    .dashboard__header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+    .dashboard__header-right {
+
+        width: 100%;
+
+        gap: 15px;
+
+    }
+
+    .dashboard-search {
+
+        width: 100%;
+
+        min-width: unset;
+
+    }
+
+    .dashboard-date,
+
+    .dashboard-profile {
+
+        width: 100%;
+
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:576px) {
+
+    .dashboard__main {
+
+        padding: 18px;
+
+    }
+
+    .dashboard__content {
+
+        padding: 20px;
+
+    }
+
+    .sidebar__menu {
+
+        flex-direction: column;
+
+    }
+
+    .sidebar__menu a {
+
+        flex: unset;
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+    }
+
+    .widget-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+    .dashboard-icon {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+}
+
+/*=================================================
+            MOBILE SIDEBAR
+=================================================*/
+
+.sidebar-toggle {
+
+    display: none;
+
+    position: fixed;
+
+    top: 20px;
+
+    left: 20px;
+
+    width: 52px;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    z-index: 1100;
+
+    box-shadow: 0 12px 30px rgba(37, 99, 235, .30);
+
+}
+
+.sidebar-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, .45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 998;
+
+}
+
+@media (max-width:768px) {
+
+    .sidebar-toggle {
+
+        display: grid;
+
+        place-items: center;
+
+    }
+
+    .sidebar {
+
+        position: fixed;
+
+        top: 0;
+
+        left: -300px;
+
+        width: 280px;
+
+        height: 100vh;
+
+        z-index: 999;
+
+        transition: left .35s ease;
+
+    }
+
+    .sidebar.active {
+
+        left: 0;
+
+    }
+
+    .sidebar-overlay.active {
+
+        opacity: 1;
+
+        visibility: visible;
+
+    }
+
+    .dashboard__main {
+
+        padding-top: 90px;
+
+    }
+
+}
+
+/*=================================================
+        RESPONSIVE FINAL POLISH
+=================================================*/
+
+/* Better touch targets */
+
+@media (max-width:768px) {
+
+    .sidebar__menu a,
+    .dashboard-icon,
+    .sidebar-toggle,
+    .widget-header a {
+
+        min-height: 48px;
+
+    }
+
+    .course-card,
+    .assignment-card,
+    .notice-card,
+    .event-card,
+    .attendance-card,
+    .attendance-subjects {
+
+        border-radius: 20px;
+
+    }
+
+}
+
+/* Small phones */
+
+@media (max-width:480px) {
+
+    html {
+
+        font-size: 15px;
+
+    }
+
+    .dashboard__header-left h1 {
+
+        font-size: 1.7rem;
+
+    }
+
+    .dashboard-avatar {
+
+        width: 46px;
+
+        height: 46px;
+
+        font-size: .95rem;
+
+    }
+
+    .progress-circle {
+
+        width: 110px;
+
+        height: 110px;
+
+    }
+
+    .progress-circle::before {
+
+        width: 84px;
+
+        height: 84px;
+
+    }
+
+    .event-date {
+
+        width: 64px;
+
+        min-width: 64px;
+
+        height: 74px;
+
+    }
+
+    .event-date .day {
+
+        font-size: 1.4rem;
+
+    }
+
+}
+
+/* Large screens */
+
+@media (min-width:1600px) {
+
+    .dashboard {
+
+        max-width: 1600px;
+
+        margin: 0 auto;
+
+    }
+
+}
+
+/*=================================================
+            PREMIUM FINAL POLISH
+=================================================*/
+
+/* Smooth scrolling */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+/* Global transition */
+
+* {
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+
+}
+
+/* Better focus styles */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+
+    outline: 3px solid rgba(37, 99, 235, .35);
+
+    outline-offset: 3px;
+
+    border-radius: 10px;
+
+}
+
+/* Better selection */
+
+::selection {
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+}
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #E2E8F0;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: linear-gradient(var(--primary),
+            var(--secondary));
+
+    border-radius: 999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    filter: brightness(.95);
+
+}
+
+/* Reduce animation for users who prefer it */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
+
+/*=================================================
+        PERFORMANCE OPTIMIZATION
+=================================================*/
+
+.course-card,
+.assignment-card,
+.notice-card,
+.event-card,
+.stat-box {
+
+    will-change: transform;
+
+}
+
+.hidden {
+
+    will-change: opacity, transform;
+
+}

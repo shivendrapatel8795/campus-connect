@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        CampusConnect | Smart College Portal
+    </title>
+    <meta name="description"
+        content="CampusConnect is a modern smart college portal for students and teachers. Manage attendance, assignments, clubs, placements, events and more.">
+    <meta name="keywords"
+        content="college portal, campus management, attendance system, student dashboard, smart college portal">
+    <meta name="author" content="Shivendra Patel">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563EB">
+    <meta property="og:title" content="CampusConnect | Smart College Portal">
+    <meta property="og:description" content="Modern College Portal built using HTML, CSS and JavaScript.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/banner.jpg">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/darkmode.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="assets/css/tables.css">
+</head>
+
+<body>
+    <header id="navbar"></header>
+    <main>
+        <section class="hero">
+            <div class="hero__background">
+                <div class="glow glow--one"></div>
+                <div class="glow glow--two"></div>
+                <div class="glow glow--three"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero__wrapper">
+                    <div class="hero__content" data-aos="fade-right">
+                        <span class="hero__badge">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            Smart College Portal
+                        </span>
+
+                        <h1 class="hero__title">
+                            Empower Your
+                            <span>Campus Journey</span>
+                            With One Smart Platform
+
+                        </h1>
+
+                        <p class="hero__description">
+                            CampusConnect brings attendance,
+                            assignments, clubs, placements,
+                            notices, events and communication
+                            together into one modern experience
+                            designed for every student and teacher.
+                        </p>
+
+                        <div class="hero__buttons">
+                            <a href="signup.html" class="hero-btn hero-btn--primary">
+                                Get Started
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <a href="about.html" class="hero-btn hero-btn--secondary">
+                                Learn More
+                            </a>
+                        </div>
+
+                        <div class="hero__stats">
+                            <div class="stat-card">
+                                <h2>5000+</h2>
+                                <p>Students</p>
+                            </div>
+
+                            <div class="stat-card">
+                                <h2>120+</h2>
+                                <p>Events</p>
+                            </div>
+
+                            <div class="stat-card">
+                                <h2>50+</h2>
+                                <p>Clubs</p>
+                            </div>
+
+                            <div class="stat-card">
+                                <h2>98%</h2>
+                                <p>Satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero__visual" data-aos="fade-left">
+                        <div class="dashboard-preview">
+                            <div class="dashboard-header">
+                                <div class="window-controls">
+                                    <span class="red"></span>
+                                    <span class="yellow"></span>
+                                    <span class="green"></span>
+                                </div>
+
+                                <div class="dashboard-title">
+                                    Student Dashboard
+                                </div>
+                            </div>
+
+                            <div class="dashboard-body">
+                                <aside class="dashboard-sidebar">
+                                    <div class="sidebar-item active">
+                                        <i class="fa-solid fa-house"></i>
+                                    </div>
+
+                                    <div class="sidebar-item">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                    </div>
+
+                                    <div class="sidebar-item">
+                                        <i class="fa-solid fa-book"></i>
+                                    </div>
+
+                                    <div class="sidebar-item">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+
+                                    <div class="sidebar-item">
+                                        <i class="fa-solid fa-bell"></i>
+                                    </div>
+                                </aside>
+
+                                <div class="dashboard-content">
+                                    <div class="widget attendance">
+                                        <h4>Attendance</h4>
+                                        <div class="progress-ring"></div>
+                                    </div>
+
+                                    <div class="widget profile">
+                                        <div class="avatar"></div>
+                                        <h4>Alex Johnson</h4>
+                                        <p>Computer Science</p>
+                                    </div>
+
+                                    <div class="widget timetable">
+                                        <h4>Today's Classes</h4>
+                                        <ul>
+                                            <li>AI & ML</li>
+                                            <li>Web Development</li>
+                                            <li>Database</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="widget notifications">
+                                        <h4>Notifications</h4>
+                                        <p>New Assignment Uploaded</p>
+                                        <p>Hackathon Registration Open</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trusted section">
+            <div class="container">
+                <div class="trusted__header" data-aos="fade-up">
+                    <span class="trusted__badge">
+                        Trusted Across Campus
+                    </span>
+
+                    <h2 class="trusted__title">
+                        Designed for Modern Colleges
+                    </h2>
+
+                    <p class="trusted__description">
+                        A unified platform that brings students,
+                        teachers and campus administration together.
+                    </p>
+                </div>
+
+                <div class="trusted__grid">
+                    <div class="trusted__card" data-aos="zoom-in" data-aos-delay="0">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <h3>5000+</h3>
+                        <p>Students Connected</p>
+                    </div>
+
+                    <div class="trusted__card" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h3>250+</h3>
+                        <p>Faculty Members</p>
+                    </div>
+
+                    <div class="trusted__card" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <h3>120+</h3>
+                        <p>Campus Events</p>
+                    </div>
+
+                    <div class="trusted__card" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h3>50+</h3>
+                        <p>Student Clubs</p>
+                    </div>
+
+                    <div class="trusted__card" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <h3>300+</h3>
+                        <p>Placement Opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features section">
+            <div class="container">
+                <div class="features__header" data-aos="fade-up">
+                    <span class="features__badge">
+                        Everything You Need
+                    </span>
+
+                    <h2 class="features__title">
+                        Powerful Features For Every Campus
+                    </h2>
+
+                    <p class="features__description">
+                        CampusConnect combines every important academic tool into
+                        one modern platform for students, teachers and administrators.
+                    </p>
+                </div>
+
+                <div class="features__grid">
+                    <article class="feature-card" data-aos="fade-up">
+                        <div class="feature-card__icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+
+                        <h3>Attendance Tracking</h3>
+
+                        <p>
+                            Monitor attendance with real-time records,
+                            analytics and reports.
+                        </p>
+                    </article>
+
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card__icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <h3>Assignments</h3>
+
+                        <p>
+                            Submit assignments, receive deadlines
+                            and track progress easily.
+                        </p>
+                    </article>
+
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card__icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+
+                        <h3>Events</h3>
+
+                        <p>
+                            Discover workshops, hackathons,
+                            seminars and campus activities.
+                        </p>
+                    </article>
+
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-card__icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <h3>Student Clubs</h3>
+
+                        <p>
+                            Join clubs, manage communities
+                            and collaborate with students.
+                        </p>
+                    </article>
+
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-card__icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <h3>Placements</h3>
+
+                        <p>
+                            View placement drives,
+                            internships and career opportunities.
+                        </p>
+                    </article>
+
+                    <article class="feature-card feature-card--highlight" data-aos="fade-up" data-aos-delay="500">
+                        <div class="feature-card__icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <h3>Performance Analytics</h3>
+
+                        <p>
+                            Get complete academic insights through
+                            interactive dashboards and reports.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="why section">
+
+            <div class="container">
+                <div class="why__wrapper">
+                    <div class="why__visual" data-aos="fade-right">
+                        <div class="why-dashboard">
+                            <div class="why-dashboard__header">
+                                <div class="window-buttons">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <h4>Campus Analytics</h4>
+                            </div>
+
+                            <div class="why-dashboard__body">
+                                <div class="analytics-card">
+                                    <span>Total Students</span>
+                                    <h2>5,248</h2>
+
+                                    <div class="analytics-progress">
+                                        <div class="analytics-progress__bar"></div>
+                                    </div>
+
+                                </div>
+
+                                <div class="analytics-grid">
+
+                                    <div class="mini-card">
+
+                                        <i class="fa-solid fa-user-check"></i>
+
+                                        <h5>Attendance</h5>
+
+                                        <p>95%</p>
+
+                                    </div>
+
+                                    <div class="mini-card">
+
+                                        <i class="fa-solid fa-book-open"></i>
+
+                                        <h5>Assignments</h5>
+
+                                        <p>128</p>
+
+                                    </div>
+
+                                    <div class="mini-card">
+
+                                        <i class="fa-solid fa-calendar-days"></i>
+
+                                        <h5>Events</h5>
+
+                                        <p>24</p>
+
+                                    </div>
+
+                                    <div class="mini-card">
+
+                                        <i class="fa-solid fa-users"></i>
+
+                                        <h5>Clubs</h5>
+
+                                        <p>50+</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="why__content" data-aos="fade-left">
+
+                        <span class="why__badge">
+
+                            Why CampusConnect?
+
+                        </span>
+
+                        <h2 class="why__title">
+
+                            Everything Your Campus Needs In One Platform
+
+                        </h2>
+
+                        <p class="why__description">
+
+                            Manage academics, communication, attendance,
+                            events, clubs and placements from a single,
+                            modern dashboard built for colleges.
+
+                        </p>
+
+                        <div class="why__features">
+
+                            <div class="why-feature">
+
+                                <div class="why-feature__icon">
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>Secure Authentication</h4>
+
+                                    <p>
+
+                                        Secure login system with protected
+                                        student and faculty accounts.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="why-feature">
+
+                                <div class="why-feature__icon">
+
+                                    <i class="fa-solid fa-bolt"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>Lightning Fast</h4>
+
+                                    <p>
+
+                                        Optimized interface for smooth
+                                        navigation and quick access.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="why-feature">
+
+                                <div class="why-feature__icon">
+
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>Responsive Design</h4>
+
+                                    <p>
+
+                                        Works beautifully on desktops,
+                                        tablets and smartphones.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="why-feature">
+
+                                <div class="why-feature__icon">
+
+                                    <i class="fa-solid fa-layer-group"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>Centralized Management</h4>
+
+                                    <p>
+
+                                        Keep every department connected
+                                        through one unified platform.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STUDENT EXPERIENCE -->
+
+        <section class="student section">
+
+            <div class="container">
+
+                <div class="student__wrapper">
+
+                    <div class="student__content" data-aos="fade-right">
+
+                        <span class="student__badge">
+                            Built For Students
+                        </span>
+
+                        <h2 class="student__title">
+                            Everything A Student Needs In One Place
+                        </h2>
+
+                        <p class="student__description">
+
+                            Stay organized with attendance tracking,
+                            assignments, class schedules, study
+                            resources and placement updates through
+                            one beautiful and easy-to-use dashboard.
+
+                        </p>
+
+                        <div class="student__list">
+
+                            <div class="student-item">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                <div>
+
+                                    <h4>Attendance Tracking</h4>
+
+                                    <p>
+                                        Monitor attendance with
+                                        real-time percentage updates.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="student-item">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                <div>
+
+                                    <h4>Assignments</h4>
+
+                                    <p>
+                                        Submit work before deadlines
+                                        and track your progress.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="student-item">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                <div>
+
+                                    <h4>Study Resources</h4>
+
+                                    <p>
+                                        Access notes, PDFs and
+                                        learning materials anytime.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="student-item">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                <div>
+
+                                    <h4>Placement Updates</h4>
+
+                                    <p>
+                                        Never miss internship or
+                                        placement opportunities.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <a href="student.html" class="hero-btn hero-btn--primary">
+
+                            Explore Student Portal
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                    <div class="student__visual" data-aos="fade-left">
+
+                        <div class="student-dashboard">
+
+                            <div class="student-dashboard__header">
+
+                                <h4>Student Dashboard</h4>
+
+                                <span>Today</span>
+
+                            </div>
+
+                            <div class="student-dashboard__body">
+
+                                <div class="student-card">
+
+                                    <h5>Attendance</h5>
+
+                                    <strong>95%</strong>
+
+                                </div>
+
+                                <div class="student-card">
+
+                                    <h5>Assignments</h5>
+
+                                    <strong>08 Pending</strong>
+
+                                </div>
+
+                                <div class="student-card student-card--wide">
+
+                                    <h5>Today's Classes</h5>
+
+                                    <ul>
+
+                                        <li>Artificial Intelligence</li>
+
+                                        <li>Database Management</li>
+
+                                        <li>Web Development</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="student-card student-card--wide">
+
+                                    <h5>Notifications</h5>
+
+                                    <p>
+                                        Hackathon registrations are now open.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TEACHER EXPERIENCE -->
+
+        <section class="teacher section">
+
+            <div class="container">
+
+                <div class="teacher__wrapper">
+
+                    <div class="teacher__visual" data-aos="fade-right">
+
+                        <div class="teacher-dashboard">
+
+                            <div class="teacher-dashboard__header">
+
+                                <h4>Faculty Dashboard</h4>
+
+                                <span>Live</span>
+
+                            </div>
+
+                            <div class="teacher-dashboard__body">
+
+                                <div class="teacher-card">
+
+                                    <h5>Classes Today</h5>
+
+                                    <strong>06</strong>
+
+                                </div>
+
+                                <div class="teacher-card">
+
+                                    <h5>Pending Reviews</h5>
+
+                                    <strong>24</strong>
+
+                                </div>
+
+                                <div class="teacher-card teacher-card--wide">
+
+                                    <h5>Recent Activities</h5>
+
+                                    <ul>
+
+                                        <li>Attendance Submitted</li>
+
+                                        <li>Assignment Evaluated</li>
+
+                                        <li>Notice Published</li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="teacher-card teacher-card--wide">
+
+                                    <h5>Performance Summary</h5>
+
+                                    <p>
+
+                                        Average class attendance is
+                                        <strong>91%</strong> this week.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="teacher__content" data-aos="fade-left">
+
+                        <span class="teacher__badge">
+
+                            Built For Faculty
+
+                        </span>
+
+                        <h2 class="teacher__title">
+
+                            Empower Teachers With Smart Academic Tools
+
+                        </h2>
+
+                        <p class="teacher__description">
+
+                            Manage attendance, evaluate assignments,
+                            publish notices, monitor student progress
+                            and organize classroom activities through
+                            one centralized dashboard.
+
+                        </p>
+
+                        <div class="teacher__list">
+
+                            <div class="teacher-item">
+
+                                <i class="fa-solid fa-chalkboard-user"></i>
+
+                                <div>
+
+                                    <h4>Class Management</h4>
+
+                                    <p>
+
+                                        Organize classes and schedules
+                                        efficiently.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="teacher-item">
+
+                                <i class="fa-solid fa-file-circle-check"></i>
+
+                                <div>
+
+                                    <h4>Assignment Evaluation</h4>
+
+                                    <p>
+
+                                        Review submissions with faster
+                                        grading workflows.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="teacher-item">
+
+                                <i class="fa-solid fa-chart-column"></i>
+
+                                <div>
+
+                                    <h4>Student Performance</h4>
+
+                                    <p>
+
+                                        Analyze academic progress using
+                                        interactive reports.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="teacher-item">
+
+                                <i class="fa-solid fa-bullhorn"></i>
+
+                                <div>
+
+                                    <h4>Notice Publishing</h4>
+
+                                    <p>
+
+                                        Share important announcements
+                                        with students instantly.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <a href="faculty.html" class="hero-btn hero-btn--primary">
+
+                            Explore Faculty Portal
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ADMIN EXPERIENCE -->
+
+        <section class="admin section">
+
+            <div class="container">
+
+                <div class="admin__wrapper">
+
+                    <div class="admin__content" data-aos="fade-right">
+
+                        <span class="admin__badge">
+
+                            Built For Administration
+
+                        </span>
+
+                        <h2 class="admin__title">
+
+                            Complete Campus Management From One Dashboard
+
+                        </h2>
+
+                        <p class="admin__description">
+
+                            Campus administrators can manage students,
+                            faculty, departments, reports and campus
+                            operations from one centralized platform
+                            designed for maximum efficiency.
+
+                        </p>
+
+                        <div class="admin__list">
+
+                            <div class="admin-item">
+
+                                <i class="fa-solid fa-users-gear"></i>
+
+                                <div>
+
+                                    <h4>User Management</h4>
+
+                                    <p>
+
+                                        Manage students, teachers and
+                                        administrator accounts easily.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="admin-item">
+
+                                <i class="fa-solid fa-building"></i>
+
+                                <div>
+
+                                    <h4>Department Control</h4>
+
+                                    <p>
+
+                                        Organize departments and monitor
+                                        campus-wide activities.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="admin-item">
+
+                                <i class="fa-solid fa-chart-pie"></i>
+
+                                <div>
+
+                                    <h4>Analytics & Reports</h4>
+
+                                    <p>
+
+                                        Generate academic reports and
+                                        performance insights instantly.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="admin-item">
+
+                                <i class="fa-solid fa-shield-halved"></i>
+
+                                <div>
+
+                                    <h4>System Security</h4>
+
+                                    <p>
+
+                                        Maintain secure access and monitor
+                                        important administrative actions.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <a href="admin.html" class="hero-btn hero-btn--primary">
+
+                            Explore Admin Panel
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                    <div class="admin__visual" data-aos="fade-left">
+
+                        <div class="admin-dashboard">
+
+                            <div class="admin-dashboard__header">
+
+                                <h4>Admin Dashboard</h4>
+
+                                <span>Online</span>
+
+                            </div>
+
+                            <div class="admin-dashboard__body">
+
+                                <div class="admin-card">
+
+                                    <h5>Total Students</h5>
+
+                                    <strong>5,248</strong>
+
+                                </div>
+
+                                <div class="admin-card">
+
+                                    <h5>Faculty Members</h5>
+
+                                    <strong>186</strong>
+
+                                </div>
+
+                                <div class="admin-card">
+
+                                    <h5>Departments</h5>
+
+                                    <strong>12</strong>
+
+                                </div>
+
+                                <div class="admin-card">
+
+                                    <h5>Active Users</h5>
+
+                                    <strong>4,912</strong>
+
+                                </div>
+
+                                <div class="admin-card admin-card--wide">
+
+                                    <h5>System Status</h5>
+
+                                    <p>
+
+                                        All campus services are running
+                                        normally with 99.9% uptime.
+
+                                    </p>
+
+                                </div>
+
+                                <div class="admin-card admin-card--wide">
+
+                                    <h5>Latest Reports</h5>
+
+                                    <ul>
+
+                                        <li>Monthly Attendance Report</li>
+
+                                        <li>Placement Statistics</li>
+
+                                        <li>Department Performance</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TESTIMONIALS -->
+
+        <section class="testimonials section">
+
+            <div class="container">
+
+                <div class="testimonials__header" data-aos="fade-up">
+
+                    <span class="testimonials__badge">
+
+                        Testimonials
+
+                    </span>
+
+                    <h2 class="testimonials__title">
+
+                        Trusted By Students, Faculty & Administrators
+
+                    </h2>
+
+                    <p class="testimonials__description">
+
+                        CampusConnect is designed to simplify campus life
+                        for everyone. Here's what our users say about
+                        their experience.
+
+                    </p>
+
+                </div>
+
+                <div class="testimonials__grid">
+
+                    <article class="testimonial-card" data-aos="fade-up">
+
+                        <div class="testimonial-card__stars">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+
+                        <p class="testimonial-card__text">
+
+                            "CampusConnect has made tracking attendance,
+                            assignments and notices incredibly simple.
+                            Everything I need is available in one place."
+
+                        </p>
+
+                        <div class="testimonial-card__footer">
+
+                            <div class="testimonial-avatar">
+
+                                RS
+
+                            </div>
+
+                            <div>
+
+                                <h4>Rahul Sharma</h4>
+
+                                <span>Computer Science Student</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
+
+                        <div class="testimonial-card__stars">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+
+                        <p class="testimonial-card__text">
+
+                            "Managing attendance and evaluating assignments
+                            has become much faster. The dashboard saves
+                            valuable time every day."
+
+                        </p>
+
+                        <div class="testimonial-card__footer">
+
+                            <div class="testimonial-avatar">
+
+                                AP
+
+                            </div>
+
+                            <div>
+
+                                <h4>Anita Patel</h4>
+
+                                <span>Assistant Professor</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+
+                        <div class="testimonial-card__stars">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+
+                        <p class="testimonial-card__text">
+
+                            "The centralized administration panel helps us
+                            manage students, faculty and reports efficiently
+                            from one secure platform."
+
+                        </p>
+
+                        <div class="testimonial-card__footer">
+
+                            <div class="testimonial-avatar">
+
+                                VK
+
+                            </div>
+
+                            <div>
+
+                                <h4>Vivek Kumar</h4>
+
+                                <span>College Administrator</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FAQ -->
+
+        <section id="faq" class="faq section">
+
+            <div class="container">
+
+                <div class="faq__header" data-aos="fade-up">
+
+                    <span class="faq__badge">
+
+                        Frequently Asked Questions
+
+                    </span>
+
+                    <h2 class="faq__title">
+
+                        Got Questions? We've Got Answers.
+
+                    </h2>
+
+                    <p class="faq__description">
+
+                        Find answers to the most common questions
+                        about CampusConnect and discover how our
+                        platform simplifies campus management.
+
+                    </p>
+
+                </div>
+
+                <div class="faq__container">
+
+                    <div class="faq-item active">
+
+                        <button class="faq-question">
+
+                            <span>What is CampusConnect?</span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                CampusConnect is a smart college portal
+                                that helps students, teachers and
+                                administrators manage academic activities
+                                from one centralized platform.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            <span>Can students track attendance?</span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                Yes. Students can monitor attendance,
+                                assignments, schedules and notifications
+                                through their personalized dashboard.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            <span>Can teachers manage assignments?</span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                Faculty members can create assignments,
+                                evaluate submissions, publish notices
+                                and monitor classroom performance.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            <span>Is CampusConnect mobile friendly?</span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                Absolutely. CampusConnect is designed
+                                with a responsive interface that works
+                                smoothly on desktops, tablets and
+                                smartphones.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            <span>How secure is student data?</span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                The platform is designed with secure
+                                authentication and role-based access
+                                to help protect academic information.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Call to action -->
+
+        <section class="cta section">
+
+            <div class="container">
+
+                <div class="cta__card" data-aos="zoom-in">
+
+                    <div class="cta__shape cta__shape--one"></div>
+                    <div class="cta__shape cta__shape--two"></div>
+
+                    <div class="cta__content">
+
+                        <span class="cta__badge">
+
+                            Join CampusConnect Today
+
+                        </span>
+
+                        <h2 class="cta__title">
+
+                            Ready To Transform Your Campus Experience?
+
+                        </h2>
+
+                        <p class="cta__description">
+
+                            Empower students, teachers and administrators
+                            with one smart platform for attendance,
+                            academics, communication, events and campus
+                            management.
+
+                        </p>
+
+                        <div class="cta__buttons">
+
+                            <a href="signup.html" class="hero-btn hero-btn--primary">
+
+                                Get Started
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                            <a href="about.html" class="hero-btn hero-btn--secondary">
+
+                                Learn More
+
+                            </a>
+
+                        </div>
+
+                        <div class="cta__stats">
+
+                            <div class="cta-stat">
+
+                                <h3>5000+</h3>
+
+                                <p>Students</p>
+
+                            </div>
+
+                            <div class="cta-stat">
+
+                                <h3>200+</h3>
+
+                                <p>Faculty</p>
+
+                            </div>
+
+                            <div class="cta-stat">
+
+                                <h3>120+</h3>
+
+                                <p>Events</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer__grid">
+
+                <div class="footer__column">
+
+                    <a href="index.html" class="footer__logo">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        CampusConnect
+
+                    </a>
+
+                    <p class="footer__description">
+
+                        CampusConnect is a modern college portal
+                        that connects students, teachers and
+                        administrators through one smart digital
+                        platform.
+
+                    </p>
+
+                    <div class="footer__social">
+
+                        <a href="#" aria-label="Facebook">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="#" aria-label="X">
+
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="footer__column">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li><a href="index.html">Home</a></li>
+
+                        <li><a href="about.html">About</a></li>
+
+                        <li><a href="events.html">Events</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+
+                        <li><a href="login.html">Login</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer__column">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="student.html">Student Portal</a></li>
+
+                        <li><a href="faculty.html">Faculty Portal</a></li>
+
+                        <li><a href="admin.html">Admin Panel</a></li>
+
+                        <li><a href="#faq">FAQ</a></li>
+
+                        <li><a href="#">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer__column">
+
+                    <h3>Contact</h3>
+
+                    <ul class="footer__contact">
+
+                        <li>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Lucknow, Uttar Pradesh, India
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            info@campusconnect.com
+
+                        </li>
+
+                        <li>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            +91 98765 43210
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM BAR -->
+
+            <div class="footer__bottom">
+
+                <p>
+
+                    © <span id="currentYear"></span>
+                    CampusConnect. All Rights Reserved.
+
+                </p>
+
+                <p>
+
+                    Made with
+                    <i class="fa-solid fa-heart"></i>
+                    for Education.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- AOS -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | CampusConnect</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/login.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div id="navbar"></div>
+
+    <main>
+
+        <section class="login">
+
+            <div class="container">
+
+                <div class="login__wrapper">
+
+                    <!-- Left Side -->
+
+                    <div class="login__content" data-aos="fade-right">
+
+                        <span class="login__badge">
+
+                            Welcome Back
+
+                        </span>
+
+                        <h1 class="login__title">
+
+                            Login To
+
+                            <span>CampusConnect</span>
+
+                        </h1>
+
+                        <p class="login__description">
+
+                            Access your student,
+                            teacher or administrator
+                            dashboard securely.
+
+                        </p>
+
+                        <ul class="login__features">
+
+                            <li>
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                Secure Authentication
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                Role Based Dashboard
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                Fast & Responsive
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Right Side -->
+
+                    <div class="login__card" data-aos="fade-left">
+
+                        <h2>
+
+                            Sign In
+
+                        </h2>
+
+                        <form id="loginForm">
+
+                            <!-- Role -->
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Login As
+
+                                </label>
+
+                                <select id="role" required>
+
+                                    <option value="">
+
+                                        Select Role
+
+                                    </option>
+
+                                    <option value="student">
+
+                                        Student
+
+                                    </option>
+
+                                    <option value="teacher">
+
+                                        Teacher
+
+                                    </option>
+
+                                    <option value="admin">
+
+                                        Administrator
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- Email -->
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Email Address
+
+                                </label>
+
+                                <input type="email" id="email" placeholder="Enter your email" required>
+
+                            </div>
+
+                            <!-- Password -->
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Password
+
+                                </label>
+
+                                <div class="password-box">
+
+                                    <input type="password" id="password" placeholder="Enter password" required>
+
+                                    <button type="button" id="togglePassword">
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Remember -->
+
+                            <div class="login__options">
+
+                                <label>
+
+                                    <input type="checkbox">
+
+                                    Remember Me
+
+                                </label>
+
+                                <a href="#">
+
+                                    Forgot Password?
+
+                                </a>
+
+                            </div>
+
+                            <!-- Button -->
+
+                            <button class="login-btn" type="submit">
+
+                                Login
+
+                            </button>
+
+                            <!-- Signup -->
+
+                            <p class="signup-link">
+
+                                Don't have an account?
+
+                                <a href="signup.html">
+
+                                    Create Account
+
+                                </a>
+
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- JavaScript -->
+
+    <script src="assets/js/app.js"></script>
+
+    <script src="assets/js/login.js"></script>
+
+</body>
+
+</html>
